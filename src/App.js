@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Fragment} from 'react'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import {Header,Container,Footer,Detail,ProductCategories,ProductHowItWorks,Personal,Question} from './components/'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+  return(
+    <Fragment>
+      <CssBaseline/>
+      <Header/>
+      <Container/>
+      <Detail/>
+      <ProductCategories/>
+      <ProductHowItWorks/>
+      <Personal/>
+      <Question/>
+      <Footer/>
+    </Fragment>
+  )
 }
-
-export default App;
