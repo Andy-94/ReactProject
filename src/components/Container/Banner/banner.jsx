@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import ProductHeroLayout from './picturelayout';
+import BannerLayout from './picturelayout';
 
 const backgroundImage =
   'https://z3.ax1x.com/2021/05/06/glm0p9.jpg';
@@ -11,7 +11,7 @@ const backgroundImage =
 const styles = (theme) => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
-    backgroundColor: '#7fc7d9', // Average color of the background image.
+    backgroundColor: '#7fc7d9',
     backgroundPosition: 'center',
   },
   button: {
@@ -29,11 +29,11 @@ const styles = (theme) => ({
   },
 });
 
-function ProductHero(props) {
+function Banner(props) {
   const { classes } = props;
 
   return (
-    <ProductHeroLayout backgroundClassName={classes.background}>
+    <BannerLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
       <img
         style={{ display: 'none' }}
@@ -41,10 +41,10 @@ function ProductHero(props) {
         alt="increase priority"
       />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        My Personal Website
+        {`I'M YUAN QIAN`}
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
+        {`Front-end Developer & Web Developer`}
       </Typography>
       <Button
         color="secondary"
@@ -54,17 +54,17 @@ function ProductHero(props) {
         component="a"
         href="#"
       >
-        Register
+        About Me
       </Button>
       <Typography variant="body2" color="inherit" className={classes.more}>
-        Discover the experience
+        Auckland, New Zealand
       </Typography>
-    </ProductHeroLayout>
+    </BannerLayout>
   );
 }
 
-ProductHero.propTypes = {
+Banner.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductHero);
+export default withStyles(styles)(Banner);

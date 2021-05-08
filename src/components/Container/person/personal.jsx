@@ -2,12 +2,10 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button'
 import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-import Snackbar from '@material-ui/core/Snackbar';
-import Button from '@material-ui/core/Button';
 
 const styles = (theme) => ({
   root: {
@@ -21,19 +19,11 @@ const styles = (theme) => ({
   card: {
     display: 'flex',
     justifyContent: 'center',
-    backgroundColor: theme.palette.warning.main,
+    backgroundColor: '#ff9e80',
     padding: theme.spacing(8, 3),
   },
   cardContent: {
     maxWidth: 400,
-  },
-  textField: {
-    width: '100%',
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(2),
-  },
-  button: {
-    width: '100%',
   },
   imagesWrapper: {
     position: 'relative',
@@ -45,7 +35,6 @@ const styles = (theme) => ({
     right: 0,
     bottom: 0,
     width: '100%',
-    background: 'url(/static/onepirate/productCTAImageDots.png)',
   },
   image: {
     position: 'absolute',
@@ -56,46 +45,39 @@ const styles = (theme) => ({
     width: '100%',
     maxWidth: 600,
   },
+  title:{
+    fontWeight:700,
+  },
+  word:{
+    fontSize:'17px'
+  },
+  button:{
+    width:'100%',
+    marginTop:20,
+  }
 });
 
 function Personal(props) {
   const { classes } = props;
-  const [open, setOpen] = React.useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
     <Container className={classes.root} component="section">
       <Grid container>
         <Grid item xs={12} md={6} className={classes.cardWrapper}>
           <div className={classes.card}>
-            <form onSubmit={handleSubmit} className={classes.cardContent}>
-              <Typography variant="h2" component="h2" gutterBottom>
-                Receive offers
+            <form className={classes.cardContent}>
+              <Typography variant="h4" className={classes.title} gutterBottom>
+                Download My Resume
               </Typography>
-              <Typography variant="h5">
-                Taste the holidays of the everyday close to home.
+              <Typography className={classes.word}>
+              Please click the button and download my resume for your review, and I would welcome the opportunity to further demonstrate my interest in the position by discussing my skills and background with you in more detail at your convenience.
               </Typography>
-              <TextField
-                noBorder
-                className={classes.textField}
-                placeholder="Your email"
-                variant="standard"
-              />
               <Button
-                type="submit"
-                color="primary"
-                variant="contained"
-                className={classes.button}
+              type="download"
+              variant="contained"
+              color="primary"
+              className={classes.button}
               >
-                Keep me updated
+                Download RESUME
               </Button>
             </form>
           </div>
@@ -104,18 +86,13 @@ function Personal(props) {
           <Hidden mdDown>
             <div className={classes.imageDots} />
             <img
-              src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750&q=80"
-              alt="call to action"
+              src="https://z3.ax1x.com/2021/05/08/g88VVH.jpg"
+              alt="teamwork"
               className={classes.image}
             />
           </Hidden>
         </Grid>
       </Grid>
-      <Snackbar
-        open={open}
-        closeFunc={handleClose}
-        message="We will send you our best offers, once a week."
-      />
     </Container>
   );
 }

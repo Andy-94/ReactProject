@@ -4,10 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
-import GraphicEqIcon from '@material-ui/icons/GraphicEq';
+import CastForEducationIcon from '@material-ui/icons/CastForEducation';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import DetailsIcon from '@material-ui/icons/Details';
 
-const backgroundImage = 'https://z3.ax1x.com/2021/05/06/gl1rCT.png';
+const backgroundImage = 'https://z3.ax1x.com/2021/05/07/g1Xmi8.png';
 
 const styles = (theme) => ({
   root: {
@@ -17,7 +18,7 @@ const styles = (theme) => ({
   },
   container: {
     marginTop: theme.spacing(15),
-    marginBottom: theme.spacing(30),
+    marginBottom: theme.spacing(20),
     display: 'flex',
     position: 'relative',
   },
@@ -34,9 +35,14 @@ const styles = (theme) => ({
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
   },
+  TypoType:{
+    fontSize: 14,
+    fontWeight: 500,
+    fontStyle: 'italic',
+  }
 });
 
-function ProductValues(props) {
+function Detail(props) {
   const { classes } = props;
 
   return (
@@ -45,45 +51,52 @@ function ProductValues(props) {
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <GraphicEqIcon fontSize="large" className={classes.icon}/>
+              <DetailsIcon fontSize="large" className={classes.icon}/>
               <Typography variant="h6" className={classes.title}>
-                The best luxury hotels
+                {`My Contact Detail`}
               </Typography>
-              <Typography variant="h5">
+              <Typography className={classes.TypoType}>
                 {
-                  'From the latest trendy boutique hotel to the iconic palace with XXL pool'
+                  'Telephone: 027-505-0575'
                 }
-
+              </Typography>
+              <Typography className={classes.TypoType}>
                 {
-                  ', go for a mini-vacation just a few subway stops away from your home.'
+                  'Email: andycodebuilder@gmail.com'
                 }
               </Typography>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <GraphicEqIcon fontSize='large' className={classes.icon}/>
+              <AccountBoxIcon fontSize='large' className={classes.icon}/>
               <Typography variant="h6" className={classes.title}>
-                New experiences
+                {`My Experiences`}
               </Typography>
-              <Typography variant="h5">
+              <Typography style={{textAlign:'center'}} className={classes.TypoType}>
                 {
-                  'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '
+                  'Comprehensive knowledge of foundational web dev skills including HTML5, CSS3, Less, jQuery, Bootstrap, Webpack, Node.js, React, and Angular. '
                 }
-
-                {'your Sundays will not be alike.'}
               </Typography>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <AccountBalanceWalletIcon fontSize='large' className={classes.icon}/>
+              <CastForEducationIcon fontSize='large' className={classes.icon}/>
               <Typography variant="h6" className={classes.title}>
-                Exclusive rates
+                {`Education Background`}
               </Typography>
-              <Typography variant="h5">
-                {'By registering, you will access specially negotiated rates '}
-                {'that you will not find anywhere else.'}
+              <Typography className={classes.TypoType}>
+                {'Auckland University of Technology'}
+              </Typography>
+              <Typography className={classes.TypoType}>
+                {'Bachelor of Computer and Information Science'}
+              </Typography>
+              <Typography className={classes.TypoType}>
+                {'ICL Graduate Business School.'}
+              </Typography>
+              <Typography className={classes.TypoType}>
+                {'Diploma in Computer Science (Level 7)'}
               </Typography>
             </div>
           </Grid>
@@ -93,8 +106,8 @@ function ProductValues(props) {
   );
 }
 
-ProductValues.propTypes = {
+Detail.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductValues);
+export default withStyles(styles)(Detail);

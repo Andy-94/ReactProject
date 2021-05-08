@@ -81,72 +81,76 @@ const styles = (theme) => ({
     left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
   },
+  title:{
+    fontSize:'40px',
+    fontWeight:700,
+  }
 });
 
-function ProductCategories(props) {
+function Category(props) {
   const { classes } = props;
 
   const images = [
     {
       url:
-        'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80',
-      title: 'Snorkeling',
+        'https://z3.ax1x.com/2021/05/07/g3StxS.jpg',
+      title: 'Vue.js',
       width: '40%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400&q=80',
-      title: 'Massage',
+        'https://z3.ax1x.com/2021/05/07/g3SUKg.jpg',
+      title: 'Web',
       width: '20%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80',
-      title: 'Hiking',
+        'https://z3.ax1x.com/2021/05/07/g3dAoD.jpg',
+      title: 'HTML5',
       width: '40%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400&q=80',
-      title: 'Tour',
+        'https://z3.ax1x.com/2021/05/07/g3asxI.jpg',
+      title: 'JavaScript',
       width: '38%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80',
-      title: 'Gastronomy',
+        'https://z3.ax1x.com/2021/05/03/gey6Gq.jpg',
+      title: 'React.js',
       width: '38%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
-      title: 'Shopping',
+      'https://z3.ax1x.com/2021/05/07/g3dNSs.jpg',
+      title: 'Git',
       width: '24%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400&q=80',
-      title: 'Walking',
+        'https://z3.ax1x.com/2021/05/07/g3d9Q1.jpg',
+      title: 'CSS3',
       width: '40%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80',
-      title: 'Fitness',
+        'https://z3.ax1x.com/2021/05/07/g3SY28.jpg',
+      title: 'Node.js',
       width: '20%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400&q=80',
-      title: 'Reading',
+        'https://z3.ax1x.com/2021/05/08/g83yCt.jpg',
+      title: 'Angular.js',
       width: '40%',
     },
   ];
 
   return (
     <Container className={classes.root} component="section">
-      <Typography variant="h4" marked="center" align="center" component="h2">
-        For all tastes and all desires
+      <Typography className={classes.title} marked="center" align="center">
+        {`MY KNOWLEDGE IN SOFTWARE`}
       </Typography>
       <div className={classes.images}>
         {images.map((image) => (
@@ -182,8 +186,8 @@ function ProductCategories(props) {
   );
 }
 
-ProductCategories.propTypes = {
+Category.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductCategories);
+export default withStyles(styles)(Category);

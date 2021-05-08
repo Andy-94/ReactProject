@@ -24,7 +24,11 @@ const styles = (theme) => ({
     marginBottom: theme.spacing(3),
   },
   buoy: {
-    width: 60,
+    width: 200,
+    borderRadius:"50%"
+  }, 
+  title:{
+    fontWeight:700,
   },
 });
 
@@ -34,17 +38,17 @@ function Question(props) {
   return (
     <Container className={classes.root} component="section">
       <Button className={classes.button}>
-        <Typography variant="h4" component="span">
-          Got any questions? Need help?
+        <Typography variant="h4" className={classes.title}>
+          Do you want to hire me? more information?
         </Typography>
       </Button>
       <Typography variant="subtitle1" className={classes.link}>
-        We are here to help. Get in touch!
+        Please send the Email to me. Get in touch!
       </Typography>
       <img
-        src="/static/themes/onepirate/producBuoy.svg"
+        src="https://z3.ax1x.com/2021/05/03/geyyin.jpg"
         className={classes.buoy}
-        alt="buoy"
+        alt="andy"
       />
     </Container>
   );

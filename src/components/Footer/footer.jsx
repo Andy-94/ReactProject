@@ -5,14 +5,14 @@ import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 function Copyright() {
   return (
     <React.Fragment>
       {'© '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="#">
         Andy Website
       </Link>{' '}
       {new Date().getFullYear()}
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   iconsWrapper: {
-    height: 120,
+    height: 130,
   },
   icons: {
     display: 'flex',
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     color:'white',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.palette.warning.main,
+    backgroundColor: '#212121',
     marginRight: theme.spacing(1),
     '&:hover': {
       backgroundColor: theme.palette.warning.dark,
@@ -94,11 +94,11 @@ export default function AppFooter() {
               spacing={2}
             >
               <Grid item className={classes.icons}>
-                <a href="https://material-ui.com/" className={classes.icon}>
-                  <FacebookIcon fontSize="large"/>
+                <a href="https://www.linkedin.cn/in/andy-yuan-qian/" className={classes.icon}>
+                  <LinkedInIcon fontSize="large"/>
                 </a>
-                <a href="https://twitter.com/MaterialUI" className={classes.icon}>
-                  <TwitterIcon fontSize="large"/>
+                <a href="https://github.com/Andy-94" className={classes.icon}>
+                  <GitHubIcon fontSize="large"/>
                 </a>
               </Grid>
               <Grid item>
@@ -142,12 +142,12 @@ export default function AppFooter() {
           <Grid item>
             <Typography variant="caption">
               {'Icons made by '}
-              <Link href="https://www.freepik.com" rel="sponsored" title="Freepik">
-                Freepik
+              <Link href="https://material-ui.com/zh/" rel="sponsored" title="Freepik">
+                Material-UI
               </Link>
               {' from '}
-              <Link href="https://www.flaticon.com" rel="sponsored" title="Flaticon">
-                www.flaticon.com
+              <Link href="https://material-ui.com/zh/" rel="sponsored" title="Flaticon">
+                www.material-ui.com
               </Link>
               {' is licensed by '}
               <Link
@@ -156,7 +156,7 @@ export default function AppFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                CC 3.0 BY
+                v4.11.1
               </Link>
             </Typography>
           </Grid>

@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import {Header,Container,Footer,Detail,ProductCategories,ProductHowItWorks,Personal,Question} from './components/'
+import {Header,Container,Footer,Detail,Category,Experience,Personal,Question} from './components/'
 
 export default function App(){
   return(
@@ -9,8 +9,8 @@ export default function App(){
       <Header/>
       <Container/>
       <Detail/>
-      <ProductCategories/>
-      <ProductHowItWorks/>
+      <Category/>
+      <Experience/>
       <Personal/>
       <Question/>
       <Footer/>

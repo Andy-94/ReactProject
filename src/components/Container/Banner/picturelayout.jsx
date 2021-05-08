@@ -45,18 +45,22 @@ const styles = (theme) => ({
   },
   line:{
     position:'absolute',
-    top: theme.spacing(31),
+    top: theme.spacing(30),
     height:'4px',
-    width:'147px',
-    backgroundColor:'red',
+    width:'250px',
+    backgroundColor:'#ff1744',
+    [theme.breakpoints.down('xs')]:{
+      display:'none'
+    },
   },
   arrowDown: {
     position: 'absolute',
     bottom: theme.spacing(4),
+    color:'#ffebee'
   },
 });
 
-function ProductHeroLayout(props) {
+function BannerLayout(props) {
   const { backgroundClassName, children, classes } = props;
 
   return (
@@ -66,16 +70,16 @@ function ProductHeroLayout(props) {
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
-        <ArrowDownwardIcon className={classes.arrowDown}/>
+        <ArrowDownwardIcon fontSize="large" className={classes.arrowDown}/>
       </Container>
     </section>
   );
 }
 
-ProductHeroLayout.propTypes = {
+BannerLayout.propTypes = {
   backgroundClassName: PropTypes.string.isRequired,
   children: PropTypes.node,
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductHeroLayout);
+export default withStyles(styles)(BannerLayout);
