@@ -24,6 +24,13 @@ const styles = (theme) => ({
       marginTop: theme.spacing(10),
     },
   },
+  h2:{
+    fontWeight:400,
+    borderBottom:'6px #f50057 solid',
+    [theme.breakpoints.down('sm')]:{
+      fontWeight:200,
+    }
+  },
   more: {
     marginTop: theme.spacing(2),
   },
@@ -34,13 +41,12 @@ function Banner(props) {
 
   return (
     <BannerLayout backgroundClassName={classes.background}>
-      {/* Increase the network loading priority of the background image. */}
       <img
         style={{ display: 'none' }}
         src={backgroundImage}
         alt="increase priority"
       />
-      <Typography color="inherit" align="center" variant="h2" marked="center">
+      <Typography color="inherit" align="center" variant="h2" marked="center" className={classes.h2}>
         {`I'M YUAN QIAN`}
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>

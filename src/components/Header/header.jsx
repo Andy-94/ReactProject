@@ -11,6 +11,11 @@ import Button from '@material-ui/core/Button'
 import ReorderIcon from '@material-ui/icons/Reorder';
 import IconButton from '@material-ui/core/IconButton'
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
+import AppsIcon from '@material-ui/icons/Apps';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import EmailIcon from '@material-ui/icons/Email';
 
 const useStyles = makeStyles((theme)=>({
   root:{
@@ -20,7 +25,11 @@ const useStyles = makeStyles((theme)=>({
     backgroundColor:'#212121',
     position:'static',
   },
-  position:{
+  left:{
+    flex:1,
+
+  },
+  right:{
     flex:1,
     display:'flex',
     justifyContent:'flex-end',
@@ -37,8 +46,10 @@ const useStyles = makeStyles((theme)=>({
       display:'none',
     }
   },
-  sectionMObileStyle:{
-
+  hide:{
+    [theme.breakpoints.down('sm')]:{
+      display:'none'
+    }
   }
 }))
 export default function Header(){ 
@@ -52,13 +63,21 @@ export default function Header(){
       return;
     }
     setState({...state,[anchor]:open})
-  }
+  };
   const list =()=>(
    <div>
-    <Button color="inherit">Skills</Button>
-    <Button color="inherit">Linkedin</Button>
-    <Button color="inherit">GitHub</Button>
-    <Button color="inherit">Email</Button>
+    <Button className={classes.hide} color="inherit" startIcon={<AppsIcon/>}>Skills</Button>
+    <Button className={classes.hide} color="inherit" startIcon={<CloudDownloadIcon/>}>Download</Button>
+    <IconButton color="inherit" component="span">
+      <LinkedInIcon />
+    </IconButton>
+    <IconButton color="inherit" component="span">
+      <GitHubIcon />
+    </IconButton>
+    <IconButton color="inherit" component="span">
+      <EmailIcon />
+    </IconButton>
+
    </div>
   );
   const mobileList =()=>(
@@ -77,7 +96,7 @@ export default function Header(){
     <div className={classes.root}>
       <AppBar className={classes.appbar}>
           <Toolbar variant="dense">
-            <Grid className={classes.position}>
+            <Grid className={classes.left}>
               <Link 
               variant="h6" 
               underline="none" 
@@ -86,7 +105,7 @@ export default function Header(){
               {`Andy Website`}
               </Link>
             </Grid>
-            <Grid className={classes.position}>
+            <Grid className={classes.right}>
               <div className={classes.sectionDesktop}>
                   {list()}
                 </div>

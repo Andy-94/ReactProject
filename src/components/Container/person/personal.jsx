@@ -76,6 +76,8 @@ function Personal(props) {
               variant="contained"
               color="primary"
               className={classes.button}
+              href="static/documents/AndyResume.pdf"
+              download="Andy_Resume.pdf"
               >
                 Download RESUME
               </Button>

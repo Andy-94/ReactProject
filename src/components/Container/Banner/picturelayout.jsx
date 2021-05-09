@@ -43,16 +43,6 @@ const styles = (theme) => ({
     backgroundRepeat: 'no-repeat',
     zIndex: -2,
   },
-  line:{
-    position:'absolute',
-    top: theme.spacing(30),
-    height:'4px',
-    width:'250px',
-    backgroundColor:'#ff1744',
-    [theme.breakpoints.down('xs')]:{
-      display:'none'
-    },
-  },
   arrowDown: {
     position: 'absolute',
     bottom: theme.spacing(4),
@@ -66,7 +56,6 @@ function BannerLayout(props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <div className={classes.line}></div>
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />

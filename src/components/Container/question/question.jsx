@@ -22,10 +22,12 @@ const styles = (theme) => ({
   link: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
+    fontFamily: 'Raleway',
   },
   buoy: {
     width: 200,
-    borderRadius:"50%"
+    borderRadius:"50%",
+    boxShadow:"5px 5px 7px 5px #263238"
   }, 
   title:{
     fontWeight:700,

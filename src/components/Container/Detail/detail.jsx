@@ -39,6 +39,7 @@ const styles = (theme) => ({
     fontSize: 14,
     fontWeight: 500,
     fontStyle: 'italic',
+    align:'center',
   }
 });
 
@@ -73,7 +74,7 @@ function Detail(props) {
               <Typography variant="h6" className={classes.title}>
                 {`My Experiences`}
               </Typography>
-              <Typography style={{textAlign:'center'}} className={classes.TypoType}>
+              <Typography className={classes.TypoType}>
                 {
                   'Comprehensive knowledge of foundational web dev skills including HTML5, CSS3, Less, jQuery, Bootstrap, Webpack, Node.js, React, and Angular. '
                 }
