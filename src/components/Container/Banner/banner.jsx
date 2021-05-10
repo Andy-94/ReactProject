@@ -58,7 +58,7 @@ function Banner(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="#"
+        href="#arrow"
       >
         About Me
       </Button>

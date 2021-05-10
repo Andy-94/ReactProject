@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import CastForEducationIcon from '@material-ui/icons/CastForEducation';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
-import DetailsIcon from '@material-ui/icons/Details';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 const backgroundImage = 'https://z3.ax1x.com/2021/05/07/g1Xmi8.png';
 
@@ -39,7 +39,7 @@ const styles = (theme) => ({
     fontSize: 14,
     fontWeight: 500,
     fontStyle: 'italic',
-    align:'center',
+    alignItems:'center',
   }
 });
 
@@ -52,7 +52,7 @@ function Detail(props) {
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <DetailsIcon fontSize="large" className={classes.icon}/>
+              <PhoneIcon fontSize="large" className={classes.icon}/>
               <Typography variant="h6" className={classes.title}>
                 {`My Contact Detail`}
               </Typography>
@@ -74,9 +74,9 @@ function Detail(props) {
               <Typography variant="h6" className={classes.title}>
                 {`My Experiences`}
               </Typography>
-              <Typography className={classes.TypoType}>
+              <Typography align="center" className={classes.TypoType}>
                 {
-                  'Comprehensive knowledge of foundational web dev skills including HTML5, CSS3, Less, jQuery, Bootstrap, Webpack, Node.js, React, and Angular. '
+                  'Comprehensive knowledge of foundational web dev skills including HTML5, CSS3, Less, JavaScript, jQuery, Bootstrap, Webpack, Node.js, React, and Angular. '
                 }
               </Typography>
             </div>

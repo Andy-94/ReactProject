@@ -100,7 +100,7 @@ function Category(props) {
     {
       url:
         'https://z3.ax1x.com/2021/05/07/g3SUKg.jpg',
-      title: 'Web',
+      title: 'Webpack',
       width: '20%',
     },
     {

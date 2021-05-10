@@ -46,13 +46,13 @@ const styles = (theme) => ({
   arrowDown: {
     position: 'absolute',
     bottom: theme.spacing(4),
-    color:'#ffebee'
-  },
+    color:'#ffebee',
+  }
 });
+
 
 function BannerLayout(props) {
   const { backgroundClassName, children, classes } = props;
-
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
