@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import BannerLayout from './picturelayout';
+import Backdrop from '@material-ui/core/Backdrop'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const backgroundImage =
   'https://z3.ax1x.com/2021/05/06/glm0p9.jpg';
@@ -34,11 +36,21 @@ const styles = (theme) => ({
   more: {
     marginTop: theme.spacing(2),
   },
+  backdrop:{
+    zIndex: theme.zIndex.drawer +1,
+    color:'#fff',
+  }
 });
 
 function Banner(props) {
   const { classes } = props;
-
+  const [open, setOpen] = React.useState(false);
+  const handleToggle =()=>{
+    setOpen(!open)
+  };
+  const handleClose=()=>{
+    setOpen(false);
+  };
   return (
     <BannerLayout backgroundClassName={classes.background}>
       <img
@@ -59,9 +71,13 @@ function Banner(props) {
         className={classes.button}
         component="a"
         href="#arrow"
+        onClick={handleToggle}
       >
-        About Me
+        {`About Me`}
       </Button>
+      <Backdrop className={classes.backdrop} open={open} onClick={handleClose} >
+        <CircularProgress color="inherit"/>
+      </Backdrop>
       <Typography variant="body2" color="inherit" className={classes.more}>
         Auckland, New Zealand
       </Typography>

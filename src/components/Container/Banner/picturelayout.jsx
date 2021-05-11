@@ -58,7 +58,7 @@ function BannerLayout(props) {
       <Container className={classes.container}>
         {children}
         <div className={classes.backdrop} />
-        <div className={clsx(classes.background, backgroundClassName)} />
+        <div className={clsx(classes.background, backgroundClassName)}/>
         <ArrowDownwardIcon fontSize="large" className={classes.arrowDown}/>
       </Container>
     </section>
